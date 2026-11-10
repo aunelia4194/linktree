@@ -7,52 +7,54 @@
   <meta name="description" content="Linktree d'Aunélia">
   <title>Aunélia</title>
 
-   <!-- LIGNE À AJOUTER POUR LE FAVICON -->
+  <!-- Favicon : L'icône affichée dans l'onglet du navigateur -->
   <link rel="icon" type="image/png" href="favicon/image.png">
   
-  <!-- La feuille de style pour les effets personnalisés -->
+  <!-- CSS sur mesure : Pour les effets et les animations personnalisés -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Le moteur Tailwind CSS -->
+  <!-- Tailwind CSS : Correction du script pour utiliser le lien fonctionnel du CDN officiel -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Le script JavaScript -->
+  <!-- Script JavaScript : Pour dynamiser la page, chargé en arrière-plan (defer) -->
   <script src="script.js" defer></script>
 </head>
 
+<!-- Arrière-plan général de la page avec un dégradé de couleurs et le centrage du contenu -->
 <body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0B1633] via-[#1A2459] to-[#57406F] px-4 py-8">
 
+  <!-- Conteneur principal qui sert à caler la carte bien au milieu -->
   <main class="w-full flex justify-center">
 
-    <!-- Carte principale avec lueur magique bicolore Bleu et Rose (Optimisée pour le rendu mobile) -->
+    <!-- La Carte Profil : Structure principale avec des bordures translucides et la double lueur (rose/bleu) -->
     <section class="bio-card relative w-80 max-w-full min-h-[650px] overflow-hidden rounded-[22px] border border-pink-400/20 shadow-[0_0_25px_rgba(34,211,238,0.45),_0_0_35px_rgba(244,114,182,0.35)] before:absolute before:inset-0 before:rounded-[22px] before:border-2 before:border-transparent before:bg-gradient-to-tr before:from-cyan-400/30 before:to-pink-400/30 before:pointer-events-none">
 
-      <!-- Image de fond -->
+      <!-- Décors de la carte : L'image de fond -->
       <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/fond.png');" aria-hidden="true"></div>
 
-      <!-- Voile pour améliorer la lisibilité (légèrement éclairci sur le dessus) -->
+      <!-- Décors de la carte : Le voile sombre en dégradé pour adoucir le fond et faire ressortir les textes -->
       <div class="absolute inset-0 bg-gradient-to-b from-[#07132B]/5 via-[#101A40]/10 to-[#07132B]/45" aria-hidden="true"></div>
 
-      <!-- Contenu -->
+      <!-- Zone de contenu (au-dessus du fond grâce au z-10) alignée verticalement -->
       <div class="relative z-10 flex min-h-[650px] flex-col items-center px-5 pt-14 pb-5">
 
-        <!-- Avatar -->
+        <!-- Photo de profil / L'avatar arrondi avec une légère bordure violette -->
         <div class="avatar h-40 w-40 shrink-0 rounded-full border-2 border-violet-300/60 bg-[#F4D7B5] bg-cover bg-center" style="background-image: url('images/moi.png');" role="img" aria-label="Portrait illustré d'Aunélia"></div>
 
-        <!-- Présentation avec Halo lumineux doux -->
+        <!-- Prénom avec un effet d'ombrage blanc lumineux (Halo) -->
         <h1 class="mt-5 text-3xl font-bold tracking-wide text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]">
           Aunélia
         </h1>
 
-        <!-- Badge Développeuse Lumineux et Translucide -->
+        <!-- Badge Métier : Le petit bloc translucide avec un effet de flou en arrière-plan (backdrop-blur) -->
         <span class="mt-2 px-3 py-1 text-center text-xs font-semibold tracking-widest uppercase text-white rounded-full bg-[#0b1633]/20 border border-white/20 backdrop-blur-md shadow-sm">
           Développeuse
         </span>
 
-        <!-- Boutons de navigation (Optimisés à 100% pour l'alignement mobile) -->
+        <!-- Liens Principaux : Le menu de navigation vertical sous forme de boutons "effet verre" -->
         <nav aria-label="Liens principaux" class="mt-8 flex w-full flex-col gap-4">
 
-          <!-- Bouton 1 -->
+          <!-- Bouton 1 : Le site Web / Le portfolio -->
           <a href="https://ton-portfolio.fr" class="glass-button flex items-center justify-between px-5 h-14 w-full rounded-xl text-white transition duration-300">
             <div class="flex items-center gap-3">
               <svg class="button-icon h-5 w-5 shrink-0" aria-hidden="true">
@@ -65,8 +67,8 @@
             </svg>
           </a>
 
-          <!-- Bouton 2 -->
-          <a href="https://github.com/TON-PSEUDO" target="_blank" rel="noopener noreferrer" class="glass-button flex items-center justify-between px-5 h-14 w-full rounded-xl text-white transition duration-300">
+          <!-- Bouton 2 : Le compte GitHub personnel -->
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="glass-button flex items-center justify-between px-5 h-14 w-full rounded-xl text-white transition duration-300">
             <div class="flex items-center gap-3">
               <svg class="button-icon h-5 w-5 shrink-0" aria-hidden="true">
                 <use href="svg/sprite.svg#github"/>
@@ -78,8 +80,8 @@
             </svg>
           </a>
 
-          <!-- Bouton 3 -->
-          <a href="mailto:tonemail@example.com" class="glass-button flex items-center justify-between px-5 h-14 w-full rounded-xl text-white transition duration-300">
+          <!-- Bouton 3 : Le lien direct pour envoyer un e-mail -->
+          <a href="mailto:adresse-email@example.com" class="glass-button flex items-center justify-between px-5 h-14 w-full rounded-xl text-white transition duration-300">
             <div class="flex items-center gap-3">
               <svg class="button-icon h-5 w-5 shrink-0" aria-hidden="true">
                 <use href="svg/sprite.svg#mail"/>
@@ -93,32 +95,32 @@
 
         </nav>
 
-        <!-- Réseaux sociaux -->
+        <!-- Réseaux Sociaux : Les liens secondaires alignés horizontalement avec les icônes SVG -->
         <nav aria-label="Réseaux sociaux" class="mt-6 flex items-center justify-center gap-4">
 
-          <!-- Discord -->
-          <a href="https://discord.com/users/TON-ID" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mon Discord">
+          <!-- L'icône Discord -->
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mon Discord">
             <svg class="h-5 w-5" aria-hidden="true">
               <use href="svg/sprite.svg#discord"/>
             </svg>
           </a>
 
-          <!-- Instagram -->
-          <a href="https://instagram.com/TON-PSEUDO" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mon profil Instagram">
+          <!-- L'icône Instagram -->
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mon profil Instagram">
             <svg class="h-5 w-5" aria-hidden="true">
               <use href="svg/sprite.svg#instagram"/>
             </svg>
           </a>
 
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/TON-PROFIL" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mon profil LinkedIn">
+          <!-- L'icône LinkedIn -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mon profil LinkedIn">
             <svg class="h-5 w-5" aria-hidden="true">
               <use href="svg/sprite.svg#linkedin"/>
             </svg>
           </a>
         </nav>
 
-        <!-- Footer -->
+        <!-- Le pied de page : Les droits d'auteur tout en bas de la carte (grâce à mt-auto) -->
         <footer class="mt-auto pt-8 text-center text-[11px] text-violet-100 drop-shadow-[0_1px_4px_rgba(0,0,0,1)]">
          © 2026 Aunélia. Tous droits réservés.
         </footer>
@@ -128,4 +130,4 @@
 
   </main>
 </body>
-</html>   
+</html>
